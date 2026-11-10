@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-espresso font-sans antialiased;
+  }
+  ::selection {
+    background: #c9a24b;
+    color: #2a1a0f;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-espresso px-8 py-3.5 text-sm font-medium tracking-wide text-cream transition-all duration-300 hover:bg-saddle hover:shadow-xl hover:shadow-saddle/30 active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-espresso px-8 py-3.5 text-sm font-medium tracking-wide text-espresso transition-all duration-300 hover:bg-espresso hover:text-cream active:scale-95;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold tracking-wide text-espresso transition-all duration-300 hover:bg-cream hover:shadow-xl hover:shadow-gold/40 active:scale-95;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.35em] text-saddle;
+  }
+  .input {
+    @apply w-full rounded-xl border border-tan/40 bg-white/70 px-4 py-3 text-sm outline-none transition focus:border-saddle focus:ring-4 focus:ring-gold/20;
+  }
+  .leather-grain {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 6px 6px, 9px 9px;
+    background-position: 0 0, 3px 4px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
